@@ -63,6 +63,43 @@ exports.protractor_common= {
         browser.manage().window().setSize().then(function () {
             console.log("Window re-sized to : "+width+" & :"+height);
         })
+    },
+
+
+    moveMouseToPositionWithElement : function(equity_element,position){
+        console.log("Position to move -:"+position);
+        browser.actions()
+            .mouseMove(equity_element)
+            .mouseDown()
+            .mouseMove(equity_element, {x: position, y: 0}) // 100px from left, 100 px from top of plot0
+            .mouseUp()
+            .perform().then(function () {
+            console.log("Mouse moved to a Perticular place");
+         });
+    },
+
+    verifyElementAttributeValue : function (element, attribute_name, expected_value) {
+        console.log("Expected value :-"+expected_value);
+        element.getAttribute(attribute_name).then(function (actual_value) {
+            console.log("Actual value :-"+actual_value);
+            assert(actual_value===expected_value);
+        })
+    },
+
+    pressAKeyKeyboard : function(key){
+        switch (key) {
+            case "enter":
+                browser.actions().sendKeys(protractor.Key.ENTER).perform().then(function () {
+                    console.log("Enter Key Pressed")
+                });
+                break;
+            case "page-down":
+                browser.actions().sendKeys(protractor.Key.PAGE_DOWN).perform().then(function () {
+                    console.log("Enter Key Pressed")
+                });
+                break;
+            default:
+        }
     }
 };
 

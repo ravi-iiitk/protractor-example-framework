@@ -15,7 +15,7 @@ exports.setup = {
                     // https://chromedriver.storage.googleapis.com/index.html
                     version: '2.39',
                     arch: process.arch,
-                    baseURL: 'https://chromedriver.storage.googleapis.com'
+                    baseURL: 'https://chromedriver.exe.storage.googleapis.com'
                 },
                 ie: {
                     // check for more recent versions of internet explorer driver here:

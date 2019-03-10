@@ -13,7 +13,7 @@ exports.config = {
         'test_scenarios/feature_files/*.feature'
     ],
     directConnect: true,
-    chromeDriver:'resources/chromedriver',
+    chromeDriver:'resources/chromedriver.exe',
     capabilities: {
         browserName: 'chrome' ,// You can use any browser you want. On a CI environment you're going to want to use PhantomJS
         chromeOptions: {
@@ -41,8 +41,8 @@ exports.config = {
     cucumberOpts: {
         format: 'json:'+jsonReportFile,
         strict: true,
-        require: 'test_scenarios/step_definitions/*.js',
-        tags: false,
+        require: 'test_scenarios/step_definitions/model-portfolio-stepdef.js',
+        tags: '@TestA',
         profile: false,
         'no-source': true,
     },
@@ -52,7 +52,6 @@ exports.config = {
             hostname: 'http://0.0.0.0:8000' // Whatever the address of your app is
         },
     },
-
 
     plugins: [
         {
@@ -68,19 +67,16 @@ exports.config = {
                 customData: {
                     title: 'Test Execution Information',
                     data: [
-                        {label: 'Project', value: 'Prudential Assigment'},
+                        {label: 'Project', value: 'WeInvest Test Automation'},
                         {label: 'Release', value: '1.0'},
                         {label: 'Cycle', value: '1'}
                     ]
                 }
             }
         },
-
-
-
     ],
 
-    ignoreUncaughtExceptions: true,
-    untrackOutstandingTimeouts: true
+    //ignoreUncaughtExceptions: true,
+    //untrackOutstandingTimeouts: true
 
 };
