@@ -86,79 +86,43 @@ Then('On next page I must see that SPDR... under What your portfolio contain ? t
 
 // Next Scenario Step Defination : TestB
 
-
-Then('I Click on “Customise” button and then ensure the text change to “Reset”', function () {
+Then('I Click on Customise button and then ensure the text change to Reset', function () {
     // Write code here that turns the phrase above into concrete actions
-
+    model_page.modelpage.verifyPortfolioCutomizable();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
 });
 
-
-When('I Click on “+Add Stock”', function () {
+When('I Click on +Add Stock', function () {
     // Write code here that turns the phrase above into concrete actions
-
+    model_page.modelpage.clickOnAddStock();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
 });
 
 
-When('I Click “Add Stock” in “BT Group plc” row.', function () {
+When('I Click Add Stock in BT Group plc row.', function () {
     // Write code here that turns the phrase above into concrete actions
-
+    model_page.modelpage.clickOnTheDesiredETF("BT Group plc");
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
 });
 
-When('I Click on “Done”', function () {
+When('I Click on Done', function () {
     // Write code here that turns the phrase above into concrete actions
-
+    model_page.modelpage.clickOnDoneButton();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
 });
 
-Then('I must see whether “BT Group plc” is added to the portfolio', function () {
+Then('I must see whether BT Group plc is added to the portfolio', function () {
     // Write code here that turns the phrase above into concrete actions
-
+    model_page.modelpage.verifyStockAdded("BT Group plc");
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
 });
-
-Given('I Navigate to https:\/\/sfo-demo.herokuapp.com\/model-portfolio', function () {
-    // Write code here that turns the phrase above into concrete actions
-
-});
-
-When('I Check whether tabs with below texts are available \(Where X, Y are are numbers)', function () {
-    // Write code here that turns the phrase above into concrete actions
-
-});
-
-Then('I must see “X Portfolio recommendations based on your preferences”', function () {
-    // Write code here that turns the phrase above into concrete actions
-
-});
-
-Then('I must see “Y other portfolio choices available”', function () {
-    // Write code here that turns the phrase above into concrete actions
-
-});
-
-When('I Resize browser window to {int} x {int}', function (int, int2) {
-    // Write code here that turns the phrase above into concrete actions
-
-});
-
-When('I Check whether tabs with below texts are available now \(Where X, Y are are numbers)', function () {
-    // Write code here that turns the phrase above into concrete actions
-});
-
-Then('I must see “Recommended \(X)”', function () {
-    // Write code here that turns the phrase above into concrete actions
-
-});
-
-Then('I must see Others \(Y)”', function () {
-    // Write code here that turns the phrase above into concrete actions
-
-});
-
-When('I Check X, Y are same', function () {
-
-});
-
-
-Then('I must them as in step {int}', function (int) {
-    // Write code here that turns the phrase above into concrete actions
-});
-

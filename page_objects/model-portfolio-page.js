@@ -28,6 +28,16 @@ exports.modelpage ={
 
     spdr_eqitypercnt_label : element(by.xpath("//span[contains(text(),'13.79')]")),
 
+    add_stock_link : element.all(by.linkText("+ Add Stock")),
+
+    etf_links : element.all(by.xpath("//div[@id='modal-1']//div[contains(@class,'modal-dialog modal-lg')]//div[@class='modal-content']//div[@class='modal-body']//div[@class='row']//div[@class='col-md-12']//div[@class='row stock-row vertical-align']//div[@class='col-md-4']//a[@href='#']")),
+
+    done_button : element(by.xpath("//div[@id='modal-1']//button[@type='button'][contains(text(),'Done')]")),
+
+    stock_links : element.all(by.xpath("//div[@class='row constituent-row vertical-align']//div[@class='col-md-4']//a[@href='#']")),
+
+    name_label : element(by.xpath("//div[@id='modal-1']//div[@class='col-md-4'][contains(text(),'Name')]")),
+
     goToURL : function () {
         protractor.browser.ignoreSynchronization = true;
         browser.driver.get(desiredURL).then(function () {
@@ -118,11 +128,94 @@ exports.modelpage ={
     },
 
     verifyTheSPDRPercentage : function () {
+        browser.sleep(1000);
         commonlib.protractor_common.pressAKeyKeyboard("page-down");
         browser.sleep(1000);
         commonlib.protractor_common.pressAKeyKeyboard("page-down");
         browser.sleep(1000);
         commonlib.protractor_common.check_element_visible(this.spdr_eqitypercnt_label);
-    }
+    },
 
+    clickOnAddStock : function () {
+        commonlib.protractor_common.takeTheScreenshot("Before_Add_Stock_Click");
+        commonlib.protractor_common.check_click(this.add_stock_link.get(0),20);
+        browser.sleep(2000);
+    },
+
+    verifyAddStockLinkClicked()
+    {
+        commonlib.protractor_common.check_element_visible(this.done_button,20);
+        commonlib.protractor_common.takeTheScreenshot("Add_Stock_Clicked");
+        browser.sleep(2000);
+    },
+    clickOnTheDesiredETF(etf_name)
+    {
+        commonlib.protractor_common.check_click(this.name_label,20);
+        for(var i=0;i<8;i++)
+        {
+            commonlib.protractor_common.pressAKeyKeyboard("page-down");
+            browser.sleep(500);
+        }
+        var alletf_links = element.all(by.xpath("//div[@id='modal-1']//div[contains(@class,'modal-dialog modal-lg')]//div[@class='modal-content']//div[@class='modal-body']//div[@class='row']//div[@class='col-md-12']//div[@class='row stock-row vertical-align']//div[@class='col-md-4']//a[@href='#']"));
+        alletf_links.count().then(function (noOfEtfs) {
+            for(let i=0;i<noOfEtfs;i++)
+            {
+                var thisLink = alletf_links.get(i);
+                thisLink.getText().then(function (actualLinkeName) {
+                    var count = i;
+                    console.log("The actual stock name is : "+actualLinkeName+"   The Expected link is : "+etf_name);
+                    if(actualLinkeName === etf_name)
+                    {
+                        console.log("The ETF Found-- Clicking it at location :"+count);
+                        var all_addsock_buttons = element.all(by.xpath("//div[@class='modal fade in']//button"));
+                        browser.sleep(1000);
+                        commonlib.protractor_common.check_click(all_addsock_buttons.get(count+1),20);
+                    }
+                })
+            }
+        })
+    },
+
+    clickOnDoneButton : function () {
+        commonlib.protractor_common.check_click(this.done_button,20);
+        commonlib.protractor_common.takeTheScreenshot("Stock_Added");
+        browser.sleep(2000);
+    },
+
+    verifyStockAdded : function (stock_name) {
+        commonlib.protractor_common.pressAKeyKeyboard("page-down");
+        var all_stockLinks = element.all(by.xpath("//div[@class='row constituent-row vertical-align']//div[@class='col-md-4']//a[@href='#']"));
+        all_stockLinks.count().then(function (noOfLinks) {
+        console.log("No of links is:"+noOfLinks);
+        var counter=0;
+        var found = false;
+        var reallyfound = false;
+        for (var i = 0; i< noOfLinks && found ===false; i++) {
+            all_stockLinks.get(i).getText().then(function (linkText) {
+                console.log('Link Text of element is: ' + linkText);
+                counter++;
+                console.log("Value of Counter :"+counter);
+                if(linkText.includes(stock_name))
+                {
+                    console.log("Link found");
+                    found = true;
+                    reallyfound = true;
+                    checkTheFlag(reallyfound,found,counter,noOfLinks);
+                }
+                else
+                {
+                    found = false;
+                    checkTheFlag(reallyfound,found,counter,noOfLinks);
+                }
+
+            })
+        }
+        });
+        function checkTheFlag(reallyfound,found,counter,noOfLinks) {
+            if(reallyfound===false && found===false&&counter===noOfLinks)
+            {
+                assert(found);
+            }
+        }
+    }
 };

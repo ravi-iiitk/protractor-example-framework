@@ -1,0 +1,155 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Model Portfolio Features of WeInvest Web APP",
+    "line": 1,
+    "id": "model-portfolio-features-of-weinvest-web-app",
+    "tags": [],
+    "uri": "test_scenarios\\feature_files\\model-portfolio.feature",
+    "elements": [
+      {
+        "id": "model-portfolio-features-of-weinvest-web-app;test-b:",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Test B:",
+        "tags": [
+          {
+            "name": "@TestB",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I Navigate to model portfolio page",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7867000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I Select All Weather Strategy by clicking on Explore Investment Ideas",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2706000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "In next screen I click on button Customize Portfolio to make changes to portfolio",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3891000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I Click on Customize button to enable edit controls",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2407000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I Click on Customise button and then ensure the text change to Reset",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 918000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I Click on +Add Stock",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2868000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I Click Add Stock in BT Group plc row.",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9151000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I Click on Done",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2734000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I must see whether BT Group plc is added to the portfolio",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 922000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
