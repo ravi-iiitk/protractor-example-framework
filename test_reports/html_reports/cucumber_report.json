@@ -8,6 +8,279 @@
     "uri": "test_scenarios\\feature_files\\model-portfolio.feature",
     "elements": [
       {
+        "id": "model-portfolio-features-of-weinvest-web-app;test-a",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Test A",
+        "tags": [
+          {
+            "name": "@TestA",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I Navigate to model portfolio page",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9388000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I Select All Weather Strategy by clicking on Explore Investment Ideas",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2886000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "In next screen I click on button Customize Portfolio to make changes to portfolio",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5774000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I Click on Customize button to enable edit controls",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3020000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I Change slider of SPDR S and P 500 ETF TRUST SPY US EQUITY to 50 Percent",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3601000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Click on Rebalance button",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2600000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I Click on Invest button",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3492000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "On next page I must see that SPDR... under What your portfolio contain ? to be 50 percent",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3236000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "model-portfolio-features-of-weinvest-web-app;test-b:",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Test B:",
+        "tags": [
+          {
+            "name": "@TestB",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I Navigate to model portfolio page",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2529000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I Select All Weather Strategy by clicking on Explore Investment Ideas",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2663000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "In next screen I click on button Customize Portfolio to make changes to portfolio",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5180000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I Click on Customize button to enable edit controls",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2652000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I Click on Customise button and then ensure the text change to Reset",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1046000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I Click on +Add Stock",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3115000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I Click Add Stock in BT Group plc row.",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9265000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I Click on Done",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:114"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2765000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I must see whether BT Group plc is added to the portfolio",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 887000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
         "id": "model-portfolio-features-of-weinvest-web-app;test-c",
         "keyword": "Scenario",
         "line": 26,
@@ -30,7 +303,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9061000000
+              "duration": 2450000000
             }
           },
           {
@@ -43,7 +316,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 851000000
+              "duration": 910000000
             }
           },
           {
@@ -56,7 +329,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 62000000
+              "duration": 102000000
             }
           },
           {
@@ -95,7 +368,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 516000000
+              "duration": 566000000
             }
           },
           {
@@ -108,7 +381,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 71000000
+              "duration": 56000000
             }
           },
           {
@@ -121,7 +394,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 54000000
+              "duration": 41000000
             }
           },
           {
@@ -134,7 +407,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4490000000
+              "duration": 4515000000
             }
           },
           {
@@ -147,7 +420,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7662000000
+              "duration": 7837000000
             }
           },
           {
@@ -158,7 +431,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 1000000
             }
           }
         ]

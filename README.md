@@ -18,7 +18,7 @@
 #HOW TO RUN
 1. Git clone to te code from the GitHub Repository
 2. Open command prompt (CMD)- Go to the project folder. 
-3. Use Package.json to install all dependencies 
+3. Use Package.json to install all dependencies (Install NodeJS if not installed)
 4. Go to resources folder - rename the chromedriver file to chromedriver.exe
 4. Now fire command : protractor config.js to start running the test. 
 

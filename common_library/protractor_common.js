@@ -95,7 +95,7 @@ exports.protractor_common= {
                 break;
             case "page-down":
                 browser.actions().sendKeys(protractor.Key.PAGE_DOWN).perform().then(function () {
-                    console.log("Enter Key Pressed")
+                    console.log("Page Down Key Pressed")
                 });
                 break;
             default:
