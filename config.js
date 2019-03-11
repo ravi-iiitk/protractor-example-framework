@@ -42,7 +42,7 @@ exports.config = {
         format: 'json:'+jsonReportFile,
         strict: true,
         require: 'test_scenarios/step_definitions/model-portfolio-stepdef.js',
-        tags: '@TestB',
+        tags: '@TestC',
         profile: false,
         'no-source': true,
     },

@@ -60,7 +60,7 @@ exports.protractor_common= {
     },
 
     reSizeBrowserWindow : function (width,height) {
-        browser.manage().window().setSize().then(function () {
+        browser.manage().window().setSize(width,height).then(function () {
             console.log("Window re-sized to : "+width+" & :"+height);
         })
     },
@@ -100,6 +100,16 @@ exports.protractor_common= {
                 break;
             default:
         }
+    },
+
+    getTheSubStringBetween : function(char_one, char_two, str)
+    {
+       var start_index = str.indexOf(char_one);
+       console.log("Starting point of slice:"+ start_index);
+       var end_index = str.indexOf(char_two);
+       var LenExtrat = end_index-start_index-1;
+       console.log("End point of slice:"+ end_index);
+       return str.substr(start_index+1,LenExtrat);
     }
 };
 

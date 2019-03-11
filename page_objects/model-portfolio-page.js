@@ -38,6 +38,14 @@ exports.modelpage ={
 
     name_label : element(by.xpath("//div[@id='modal-1']//div[@class='col-md-4'][contains(text(),'Name')]")),
 
+    recomonded_tab : element(by.xpath("//a[contains(text(),'3 Portfolio recommendations based on your preferen')]")),
+
+    other_tab : element(by.xpath("//a[contains(text(),'15 other portfolio choices available')]")),
+
+    recomonded_small : element(by.xpath("//a[contains(text(),'Recommended (3)')]")),
+
+    other_tab_small : element(by.xpath("//a[contains(text(),'Others (15)')]")),
+
     goToURL : function () {
         protractor.browser.ignoreSynchronization = true;
         browser.driver.get(desiredURL).then(function () {
@@ -217,5 +225,86 @@ exports.modelpage ={
                 assert(found);
             }
         }
+    },
+
+    verifyTheTabs : function () {
+        commonlib.protractor_common.check_element_visible(this.recomonded_tab,20);
+        commonlib.protractor_common.check_element_visible(this.other_tab,20);
+        commonlib.protractor_common.takeTheScreenshot("Verify_Tabs");
+    },
+
+    verifyTheTabsSamllWindow : function () {
+        commonlib.protractor_common.check_element_visible(this.recomonded_small,20);
+        commonlib.protractor_common.check_element_visible(this.other_tab_small,20);
+    },
+
+    verifyTabNames : function () {
+        this.recomonded_tab.getText().then(function (theTabText) {
+          console.log("The Tab Name : "+theTabText);
+          assert(theTabText.trim()==="3 Portfolio recommendations based on your preferences".trim());
+        });
+        this.other_tab.getText().then(function (theTabText) {
+          assert(theTabText.trim()===("15 other portfolio choices available"))
+        })
+    },
+
+    verifyTabNamesSamllWindow : function () {
+        this.recomonded_small.getText().then(function (theTabText) {
+            assert(theTabText.trim()==="Recommended (3)".trim());
+        });
+        this.other_tab_small.getText().then(function (theTabText) {
+            assert(theTabText.trim()===("Others (15)"))
+        })
+    },
+    reSizeWindow : function (weidth, height) {
+        commonlib.protractor_common.reSizeBrowserWindow(weidth, height);
+        browser.sleep(2000);
+        commonlib.protractor_common.takeTheScreenshot("Window_Resized");
+    },
+
+    verfiyValueOfX  :function () {
+        browser.manage().window().maximize();
+        commonlib.protractor_common.takeTheScreenshot("Verify_Value_X_Max");
+        this.recomonded_tab.getText().then(function (theText1) {
+            var element = browser.element;
+             var theNumPart1 = theText1.split(" ");
+             var theNumber = Number(theNumPart1[0]);
+             commonlib.protractor_common.reSizeBrowserWindow(375,667);
+             browser.sleep(3000);
+            commonlib.protractor_common.takeTheScreenshot("Verify_Value_X_SmallWindow");
+             var recomonded_small = element(by.xpath("//a[contains(text(),'Recommended (3)')]"));
+             recomonded_small.getText().then(function (theSecondNumStr) {
+                 var theSeconStr = commonlib.protractor_common.getTheSubStringBetween('(',')',theSecondNumStr);
+                 console.log("Returned String is : "+theSeconStr);
+                 var seconNum = Number(theSeconStr);
+                 console.log("First Sting :-"+theNumber);
+                 console.log("Second Sting :-"+seconNum);
+                 assert(theNumber===seconNum);
+             });
+        });
+    },
+
+    verfiyValueOfY  :function () {
+        browser.manage().window().maximize();
+        browser.sleep(3000);
+        commonlib.protractor_common.takeTheScreenshot("Verify_Value_Y_Max");
+        this.other_tab.getText().then(function (theText1) {
+            var element = browser.element;
+            var theNumPart1 = theText1.split(" ");
+            var theNumber = Number(theNumPart1[0]);
+            commonlib.protractor_common.reSizeBrowserWindow(375,667);
+            browser.sleep(3000);
+            commonlib.protractor_common.takeTheScreenshot("Verify_Value_Y_SmallWindow");
+            var other_tab_samll = element(by.xpath("//a[contains(text(),'Others (15)')]"));
+            other_tab_samll.getText().then(function (theSecondNumStr) {
+                var theSeconStr = commonlib.protractor_common.getTheSubStringBetween('(',')',theSecondNumStr);
+                console.log("Returned String is : "+theSeconStr);
+                var seconNum = Number(theSeconStr);
+                console.log("First Sting :-"+theNumber);
+                console.log("Second Sting :-"+seconNum);
+                assert(theNumber===seconNum);
+            });
+        });
+        browser.manage().window().maximize();
     }
 };

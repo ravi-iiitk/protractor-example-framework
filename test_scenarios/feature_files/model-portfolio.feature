@@ -25,12 +25,12 @@ Feature: Model Portfolio Features of WeInvest Web APP
    @TestC
   Scenario: Test C
     Given I Navigate to model portfolio page
-    When I Check whether tabs with below texts are available (Where X, Y are are numbers)
-    Then I must see “X Portfolio recommendations based on your preferences”
-    And I must see “Y other portfolio choices available”
+    When I Check whether tabs with below texts are available now Where X and Y are are numbers
+    Then I must see X Portfolio recommendations based on your preferences
+    And I must see Y other portfolio choices available
     When I Resize browser window to 375 x 667
-    And I Check whether tabs with below texts are available now (Where X, Y are are numbers)
-    Then I must see “Recommended (X)”
-    And I must see Others (Y)”
+    And I Check whether tabs with below texts are available now also Where X and Y are are numbers
+    Then I must see Recommended X
+    And I must see Others Y
     When I Check X, Y are same
     Then I must them as in step 2

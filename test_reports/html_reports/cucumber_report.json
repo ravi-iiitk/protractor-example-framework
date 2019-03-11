@@ -8,14 +8,14 @@
     "uri": "test_scenarios\\feature_files\\model-portfolio.feature",
     "elements": [
       {
-        "id": "model-portfolio-features-of-weinvest-web-app;test-b:",
+        "id": "model-portfolio-features-of-weinvest-web-app;test-c",
         "keyword": "Scenario",
-        "line": 14,
-        "name": "Test B:",
+        "line": 26,
+        "name": "Test C",
         "tags": [
           {
-            "name": "@TestB",
-            "line": 13
+            "name": "@TestC",
+            "line": 25
           }
         ],
         "type": "scenario",
@@ -23,118 +23,131 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 15,
+            "line": 27,
             "name": "I Navigate to model portfolio page",
             "match": {
               "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 7867000000
+              "duration": 9061000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 16,
-            "name": "I Select All Weather Strategy by clicking on Explore Investment Ideas",
+            "line": 28,
+            "name": "I Check whether tabs with below texts are available now Where X and Y are are numbers",
             "match": {
-              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:19"
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:133"
             },
             "result": {
               "status": "passed",
-              "duration": 2706000000
+              "duration": 851000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I must see X Portfolio recommendations based on your preferences",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 17,
-            "name": "In next screen I click on button Customize Portfolio to make changes to portfolio",
+            "line": 30,
+            "name": "I must see Y other portfolio choices available",
             "match": {
-              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:28"
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:149"
             },
             "result": {
               "status": "passed",
-              "duration": 3891000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 18,
-            "name": "I Click on Customize button to enable edit controls",
-            "match": {
-              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2407000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "I Click on Customise button and then ensure the text change to Reset",
-            "match": {
-              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:89"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 918000000
+              "duration": 54000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 20,
-            "name": "I Click on +Add Stock",
+            "line": 31,
+            "name": "I Resize browser window to 375 x 667",
             "match": {
-              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:97"
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:157"
             },
             "result": {
               "status": "passed",
-              "duration": 2868000000
+              "duration": 1000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 21,
-            "name": "I Click Add Stock in BT Group plc row.",
+            "line": 32,
+            "name": "I Check whether tabs with below texts are available now also Where X and Y are are numbers",
             "match": {
-              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:106"
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:163"
             },
             "result": {
               "status": "passed",
-              "duration": 9151000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 22,
-            "name": "I Click on Done",
-            "match": {
-              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:114"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2734000000
+              "duration": 516000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 23,
-            "name": "I must see whether BT Group plc is added to the portfolio",
+            "line": 33,
+            "name": "I must see Recommended X",
             "match": {
-              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:122"
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:171"
             },
             "result": {
               "status": "passed",
-              "duration": 922000000
+              "duration": 71000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I must see Others Y",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:179"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I Check X, Y are same",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:187"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4490000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I must them as in step 2",
+            "match": {
+              "location": "test_scenarios\\step_definitions\\model-portfolio-stepdef.js:195"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7662000000
             }
           },
           {
@@ -145,7 +158,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 5000000
             }
           }
         ]

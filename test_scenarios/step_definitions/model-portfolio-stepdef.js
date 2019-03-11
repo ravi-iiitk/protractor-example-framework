@@ -126,3 +126,77 @@ Then('I must see whether BT Group plc is added to the portfolio', function () {
         console.log('Title of Web Page is -: ' + text);
     });
 });
+
+
+// STEP DEFs FOR TEST C
+
+When('I Check whether tabs with below texts are available now Where X and Y are are numbers', function () {
+    // Write code here that turns the phrase above into concrete actions
+    model_page.modelpage.verifyTheTabs();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
+});
+
+Then('I must see X Portfolio recommendations based on your preferences', function () {
+    // Write code here that turns the phrase above into concrete actions
+    model_page.modelpage.verifyTabNames();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
+});
+
+Then('I must see Y other portfolio choices available', function () {
+    // Write code here that turns the phrase above into concrete actions
+    model_page.modelpage.verifyTabNames();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
+});
+
+When('I Resize browser window to {int} x {int}', function (weidth, hegight) {
+    // Write code here that turns the phrase above into concrete actions
+    model_page.modelpage.reSizeWindow(weidth,hegight);
+});
+
+
+When('I Check whether tabs with below texts are available now also Where X and Y are are numbers', function () {
+    // Write code here that turns the phrase above into concrete actions
+    model_page.modelpage.verifyTheTabsSamllWindow();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
+});
+
+Then('I must see Recommended X', function () {
+    // Write code here that turns the phrase above into concrete actions
+    model_page.modelpage.verifyTabNamesSamllWindow();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
+});
+
+Then('I must see Others Y', function () {
+    // Write code here that turns the phrase above into concrete actions
+    model_page.modelpage.verifyTabNamesSamllWindow();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
+});
+
+When('I Check X, Y are same', function () {
+    // Write code here that turns the phrase above into concrete actions
+    model_page.modelpage.verfiyValueOfX();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
+});
+
+Then('I must them as in step {int}', function (int) {
+    // Write code here that turns the phrase above into concrete actions
+    model_page.modelpage.verfiyValueOfY();
+    return browser.getTitle().then(function(text){
+        console.log('Title of Web Page is -: ' + text);
+    });
+});
+
